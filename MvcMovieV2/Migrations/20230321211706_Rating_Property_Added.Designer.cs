@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MvcMovieV2.Data;
 
@@ -11,9 +12,11 @@ using MvcMovieV2.Data;
 namespace MvcMovieV2.Migrations
 {
     [DbContext(typeof(MvcMovieV2Context))]
-    partial class MvcMovieV2ContextModelSnapshot : ModelSnapshot
+    [Migration("20230321211706_Rating_Property_Added")]
+    partial class Rating_Property_Added
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
